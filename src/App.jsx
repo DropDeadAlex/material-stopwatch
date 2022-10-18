@@ -137,7 +137,6 @@ export default class App2 extends React.Component {
           <TimerButton props={reset}/>
           <TimerButton props={playNpause}/>
           <TimerButton props={lap}/>
-          {/* brek sandbox with commit */}
         </section>
       </main>  
       </>
