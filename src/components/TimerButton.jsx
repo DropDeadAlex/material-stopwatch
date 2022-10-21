@@ -1,8 +1,8 @@
 import React from "react";
 
-const TimmerButton = ({ props: { action, style, label } }) => {
+const TimmerButton = ({ children: { action, style, label } }) => {
   return (
-    <button onClick={() => action?.()} className={style}>
+    <button onClick={action} className={style}>
       <span>{label}</span>
     </button>
   )

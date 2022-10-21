@@ -131,12 +131,12 @@ export default class App2 extends React.Component {
     return (
       <>
       <main>
-        <TimeDisplay time={tempo}/>
+        <TimeDisplay>{tempo}</TimeDisplay>
         
         <section id="buttons">
-          <TimerButton props={reset}/>
-          <TimerButton props={playNpause}/>
-          <TimerButton props={lap}/>
+          <TimerButton>{reset}</TimerButton>
+          <TimerButton>{playNpause}</TimerButton>
+          <TimerButton>{lap}</TimerButton>
         </section>
       </main>  
       </>
