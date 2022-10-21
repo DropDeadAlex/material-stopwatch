@@ -1,8 +1,8 @@
-import React from "react";
-import TimerButton from './components/TimerButton.jsx'
-import TimeDisplay from './components/TimeDisplay.jsx'
+import { Component } from "react";
+import { TimerButton } from './components/TimerButton.jsx'
+import { TimeDisplay } from './components/TimeDisplay.jsx'
 
-export default class App2 extends React.Component {
+class App2 extends Component {
   state = {
     nome: "",
     tempo: 0,
@@ -147,3 +147,5 @@ export default class App2 extends React.Component {
     this.changeState("initial")
   };
 }
+
+export { App2 };
