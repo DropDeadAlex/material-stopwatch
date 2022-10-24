@@ -134,9 +134,9 @@ class App2 extends Component {
         <TimeDisplay>{tempo}</TimeDisplay>
         
         <section id="buttons">
-          <TimerButton>{reset}     </TimerButton>
+          <TimerButton>{reset}</TimerButton>
           <TimerButton>{playNpause}</TimerButton>
-          <TimerButton>{lap}       </TimerButton>
+          <TimerButton>{lap}</TimerButton>
         </section>
       </main>  
       </>
