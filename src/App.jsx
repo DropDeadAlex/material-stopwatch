@@ -50,7 +50,7 @@ class App2 extends Component {
   };
   
   changeState = (state) => {
-    this.setState({ nome: this.state.labels[state] }, this.behave[state]())
+    this.setState({ nome: this.state.labels[state] }, this.behave[state])
   };
 
   behave = { 
