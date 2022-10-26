@@ -9,19 +9,19 @@ class App2 extends Component {
     contador: () => {},
     botoes: {
       playNpause: {
-        label: "Iniciar",
+        label: "play_arrow",
         action: () => {},
-        style: ""
+        style: undefined
       },
       reset: {
-        label: "Zerar",
+        label: "restart_alt",
         action: () => {},
-        style: ""
+        style: undefined
       },
       lap: {
-        label: "Volta",
+        label: "timer",
         action: () => {},
-        style: ""
+        style: undefined
       }
     },
     labels: {
@@ -64,13 +64,11 @@ class App2 extends Component {
             action: () => this.changeState("running")
           },
           reset: {
-            label: "restart_alt",
-            action: undefined,
+            ...this.state.botoes.reset,
             style: "hide"
           },
           lap: {
-            label: "timer",
-            action: undefined,
+            ...this.state.botoes.lap,
             style: "hide"
           }
         } 
@@ -88,12 +86,13 @@ class App2 extends Component {
             style: "square"
           },
           reset: {
-            label: "restart_alt",
-            action: () => this.changeState("initial")
+            ...this.state.botoes.reset,
+            action: () => this.changeState("initial"),
+            style: undefined
           },
           lap: {
-            label: "timer",
-            action: undefined
+            ...this.state.botoes.lap,
+            style: undefined
           }
         }  
       })
@@ -104,17 +103,13 @@ class App2 extends Component {
 
       this.setState({ 
         botoes: {
+          ...this.state.botoes,
           playNpause: {
             label: "play_arrow",
             action: () => this.changeState("running")
           },
-          reset: {
-            label: "restart_alt",
-            action: () => this.changeState("initial")
-          },
           lap: {
-            label: "timer",
-            action: undefined,
+            ...this.state.botoes.lap,
             style: "hide"
           }
         } 
