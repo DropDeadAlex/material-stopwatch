@@ -1,6 +1,6 @@
 import { Component } from "react";
-import { TimerButton } from './components/TimerButton.jsx'
-import { TimeDisplay } from './components/TimeDisplay.jsx'
+import { TimerButton } from './components/TimerButton'
+import { TimeDisplay } from './components/TimeDisplay'
 
 class App2 extends Component {
   state = {
@@ -53,7 +53,7 @@ class App2 extends Component {
     this.setState({ nome: this.state.labels[state] }, this.behave[state])
   };
 
-  behave = { 
+  behave = {
     initial: () => {
       this.zerar()
 
@@ -65,6 +65,7 @@ class App2 extends Component {
           },
           reset: {
             ...this.state.botoes.reset,
+            action: () => this.changeState("initial"),
             style: "hide"
           },
           lap: {
@@ -87,7 +88,6 @@ class App2 extends Component {
           },
           reset: {
             ...this.state.botoes.reset,
-            action: () => this.changeState("initial"),
             style: undefined
           },
           lap: {
