@@ -6,28 +6,28 @@ class App2 extends Component {
   state = {
     nome: "",
     tempo: 0,
-    contador: () => {},
+    contador: () => { },
     botoes: {
       playNpause: {
         label: "play_arrow",
-        action: () => {},
+        action: () => { },
         style: undefined
       },
       reset: {
         label: "restart_alt",
-        action: () => {},
+        action: () => { },
         style: undefined
       },
       lap: {
         label: "timer",
-        action: () => {},
+        action: () => { },
         style: undefined
       }
     },
     labels: {
-      initial: "inicial",
-      paused:  "pausado",
-      running: "rodando"
+      initial:  "inicial",
+      paused:   "pausado",
+      running:  "rodando"
     }
   };
 
@@ -38,17 +38,17 @@ class App2 extends Component {
       }, 10)
     })
   };
-  
+
   stop = () => {
     clearInterval(this.state.contador)
     this.setState({ contador: undefined })
   };
-  
+
   zerar = () => {
     this.stop()
     this.setState({ tempo: 0 })
   };
-  
+
   changeState = (state) => {
     this.setState({ nome: this.state.labels[state] }, this.behave[state])
   };
@@ -57,7 +57,7 @@ class App2 extends Component {
     initial: () => {
       this.zerar()
 
-      this.setState({ 
+      this.setState({
         botoes: {
           playNpause: {
             label: "play_arrow",
@@ -72,14 +72,14 @@ class App2 extends Component {
             ...this.state.botoes.lap,
             style: "hide"
           }
-        } 
+        }
       })
     },
 
     running: () => {
       this.start()
 
-      this.setState({ 
+      this.setState({
         botoes: {
           playNpause: {
             label: "pause",
@@ -94,14 +94,14 @@ class App2 extends Component {
             ...this.state.botoes.lap,
             style: undefined
           }
-        }  
+        }
       })
     },
 
     paused: () => {
       this.stop()
 
-      this.setState({ 
+      this.setState({
         botoes: {
           ...this.state.botoes,
           playNpause: {
@@ -112,7 +112,7 @@ class App2 extends Component {
             ...this.state.botoes.lap,
             style: "hide"
           }
-        } 
+        }
       })
     }
   };
@@ -127,13 +127,13 @@ class App2 extends Component {
       <>
       <main>
         <TimeDisplay>{tempo}</TimeDisplay>
-        
+
         <section id="buttons">
           <TimerButton>{reset}</TimerButton>
           <TimerButton>{playNpause}</TimerButton>
           <TimerButton>{lap}</TimerButton>
         </section>
-      </main>  
+      </main>
       </>
     )
   };
