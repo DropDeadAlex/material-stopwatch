@@ -3,13 +3,13 @@ import { createRoot } from "react-dom/client";
 
 import './styles.css';
 
-import { App2 } from "./App";
+import { StopWatch } from "./App";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <App2 />
+    <StopWatch />
   </StrictMode>
 );

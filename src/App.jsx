@@ -2,7 +2,7 @@ import { Component } from "react";
 import { TimerButton } from './components/TimerButton'
 import { TimeDisplay } from './components/TimeDisplay'
 
-class App2 extends Component {
+class StopWatch extends Component {
   state = {
     nome: "",
     tempo: 0,
@@ -143,4 +143,4 @@ class App2 extends Component {
   };
 }
 
-export { App2 };
+export { StopWatch };
