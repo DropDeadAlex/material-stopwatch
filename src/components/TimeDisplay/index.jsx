@@ -1,3 +1,5 @@
+import './styles.css';
+
 const TimeDisplay = ({ children: time }) => {
 
   const formatTime = () => {
