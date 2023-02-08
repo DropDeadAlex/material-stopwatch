@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { TimerButton } from './components/TimerButton'
+import { TimerButtons } from './components/TimerButtons'
 import { TimeDisplay } from './components/TimeDisplay'
 
 class StopWatch extends Component {
@@ -118,22 +118,14 @@ class StopWatch extends Component {
   };
 
   render = () => {
-    const {
-      tempo,
-      botoes: { reset, playNpause, lap }
-    } = this.state;
+    const { tempo, botoes } = this.state;
 
     return (
       <>
-      <main>
-        <TimeDisplay>{tempo}</TimeDisplay>
-
-        <section id="buttons">
-          <TimerButton>{reset}</TimerButton>
-          <TimerButton>{playNpause}</TimerButton>
-          <TimerButton>{lap}</TimerButton>
-        </section>
-      </main>
+        <main>
+          <TimeDisplay>{tempo}</TimeDisplay>
+          <TimerButtons>{botoes}</TimerButtons>
+        </main>
       </>
     )
   };
