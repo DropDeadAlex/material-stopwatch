@@ -4,9 +4,9 @@ import { TimeDisplay } from './components/TimeDisplay'
 
 class StopWatch extends Component {
   state = {
-    nome: "",
-    tempo: 0,
-    contador: () => { },
+    name: "",
+    time: 0,
+    counter: () => { },
     botoes: {
       playNpause: {
         label: "play_arrow",
@@ -33,24 +33,24 @@ class StopWatch extends Component {
 
   start = () => {
     this.setState({
-      contador: setInterval(() => {
-        this.setState({ tempo: this.state.tempo + .01 })
+      counter: setInterval(() => {
+        this.setState({ time: this.state.time + .01 })
       }, 10)
     })
   };
 
   stop = () => {
-    clearInterval(this.state.contador)
-    this.setState({ contador: undefined })
+    clearInterval(this.state.counter)
+    this.setState({ counter: undefined })
   };
 
   zerar = () => {
     this.stop()
-    this.setState({ tempo: 0 })
+    this.setState({ time: 0 })
   };
 
   changeState = (state) => {
-    this.setState({ nome: this.state.labels[state] }, this.behave[state])
+    this.setState({ name: this.state.labels[state] }, this.behave[state])
   };
 
   behave = {
@@ -118,12 +118,12 @@ class StopWatch extends Component {
   };
 
   render = () => {
-    const { tempo, botoes } = this.state;
+    const { time, botoes } = this.state;
 
     return (
       <>
         <main>
-          <TimeDisplay>{tempo}</TimeDisplay>
+          <TimeDisplay>{time}</TimeDisplay>
           <TimerButtons>{botoes}</TimerButtons>
         </main>
       </>

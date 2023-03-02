@@ -1,14 +1,6 @@
-import { TimerButton } from './TimerButton';
+import { TimerButton } from '../TimerButton';
 
-import styled from 'styled-components';
-
-const Buttons = styled.section`
-  display: flex;
-  align-items: center;
-  gap: 3em;
-  position: absolute;
-  bottom: 14em;
-`
+import { Buttons } from './styles'
 
 const TimerButtons = ({ children: { reset, playNpause, lap } }) => {
   return (
