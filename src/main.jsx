@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 
 import './styles.css';
 
-import { StopWatch } from "./App";
+import { StopWatch } from "./StopWatch";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);

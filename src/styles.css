@@ -1,33 +1,33 @@
-  .App {
-    font-family: sans-serif;
-    text-align: center;
-  }
-  
-  body {
-    font-family: monospace;
-    background-color: #262020;
-    height: 100%;
-  }
-  
-  div#root {
-    display: flex;
-    flex-direction: column;
-  
-    justify-content: center;
-    /* align-items: center; */
-    /* align-content: center; */
-    height: 60em;
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10em;
-  }
-  /* status label */
-  main p {
-    color: #cfcfcf;
-    font-size: 0.7em;
-  }
-  
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  font-family: monospace;
+  background-color: #262020;
+  height: 100%;
+}
+
+div#root {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  /* align-items: center; */
+  /* align-content: center; */
+  height: 60em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10em;
+}
+
+/* status label */
+main p {
+  color: #cfcfcf;
+  font-size: 0.7em;
+}

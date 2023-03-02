@@ -1,4 +1,12 @@
-import './styles.css';
+import styled from 'styled-components';
+
+const Time = styled.h1`
+  margin-top: -1em;
+  margin-bottom: 0;
+  font-size: 6em;
+  text-align: center;
+  color: #ddd;
+`
 
 const TimeDisplay = ({ children: time }) => {
 
@@ -11,7 +19,7 @@ const TimeDisplay = ({ children: time }) => {
       .toISOString().slice(start, end).replace(".", ":")
   }
 
-  return <h1>{formatTime(time)}</h1>
+  return <Time>{formatTime(time)}</Time>
 }
 
 export { TimeDisplay }
