@@ -1,5 +1,4 @@
 import { TimerButton } from '../TimerButton';
-
 import { Buttons } from './styles'
 
 const TimerButtons = ({ children: { reset, playNpause, lap } }) => {

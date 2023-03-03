@@ -7,7 +7,7 @@ class StopWatch extends Component {
     name: "",
     time: 0,
     counter: () => { },
-    botoes: {
+    buttons: {
       playNpause: {
         label: "play_arrow",
         action: () => { },
@@ -58,18 +58,18 @@ class StopWatch extends Component {
       this.zerar()
 
       this.setState({
-        botoes: {
+        buttons: {
           playNpause: {
             label: "play_arrow",
             action: () => this.changeState("running")
           },
           reset: {
-            ...this.state.botoes.reset,
+            ...this.state.buttons.reset,
             action: () => this.changeState("initial"),
             style: "hide"
           },
           lap: {
-            ...this.state.botoes.lap,
+            ...this.state.buttons.lap,
             style: "hide"
           }
         }
@@ -80,18 +80,18 @@ class StopWatch extends Component {
       this.start()
 
       this.setState({
-        botoes: {
+        buttons: {
           playNpause: {
             label: "pause",
             action: () => this.changeState("paused"),
             style: "square"
           },
           reset: {
-            ...this.state.botoes.reset,
+            ...this.state.buttons.reset,
             style: undefined
           },
           lap: {
-            ...this.state.botoes.lap,
+            ...this.state.buttons.lap,
             style: undefined
           }
         }
@@ -102,14 +102,14 @@ class StopWatch extends Component {
       this.stop()
 
       this.setState({
-        botoes: {
-          ...this.state.botoes,
+        buttons: {
+          ...this.state.buttons,
           playNpause: {
             label: "play_arrow",
             action: () => this.changeState("running")
           },
           lap: {
-            ...this.state.botoes.lap,
+            ...this.state.buttons.lap,
             style: "hide"
           }
         }
@@ -118,13 +118,13 @@ class StopWatch extends Component {
   };
 
   render = () => {
-    const { time, botoes } = this.state;
+    const { time, buttons } = this.state;
 
     return (
       <>
         <main>
           <TimeDisplay>{time}</TimeDisplay>
-          <TimerButtons>{botoes}</TimerButtons>
+          <TimerButtons>{buttons}</TimerButtons>
         </main>
       </>
     )
