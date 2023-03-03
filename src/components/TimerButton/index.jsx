@@ -1,10 +1,10 @@
-import './styles.css';
+import { Button, Icon } from './styles';
 
 const TimerButton = ({ children: { action, style, label } }) => {
   return (
-    <button onClick={action} className={style}>
-      <span>{label}</span>
-    </button>
+    <Button onClick={action} className={style}>
+      <Icon>{label}</Icon>
+    </Button>
   )
 };
 
